@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yash Pame</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css"">
+  <link rel="stylesheet" type="text/css" href="font-awesome.css"">
+
+</head>
+<body>
+
+<div class="page-loader">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<div class="bg-circles">
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="circle-3"></div>
+    <div class="circle-4"></div>
+</div>
+
+
+<css-doodle grid="5" class="doodle">
+    :doodle{
+        @grid: 15/100vmax;
+        grid-gap: 4vmax;
+    }
+
+    transform: scale(@rand(.1,.9))translate3d(@r(50px),@r(100px),0);
+    border-radius(@r(10px));
+    background-color: rgba(255,255,255,0.01);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+
+</css-doodle>
+
+<div class="overlay">
+</div>
+
+<div class="main hidden">
+    <div class="box">
+        <div class="square" style="--i:0;"></div>
+        <div class="square" style="--i:1;"></div>
+        <div class="square" style="--i:4;"></div>
+        <div class="square" style="--i:6;"></div>
+    </div>
+
+
+    <header class="header">
+        <div class="container">
+        <div class="row flex-end">
+            <button type="button" class="nav-toggler">
+            <span></span>
+            </button>
+            <nav class="nav">
+            <div class="nav-inner">
+                <ul>
+                <li><a href="#home" class="nav-item link-item">Home</a></li>
+                <li><a href="#about" class="nav-item link-item">About</a></li>
+                <li><a href="#portfolio" class="nav-item link-item">Projects</a></li>
+                <li><a href="#contact" class="nav-item link-item">Contact</a></li>
+                </ul>
+            </div>
+            </nav>
+        </div>
+        </div>
+    </header>
+
+
+    <section class="home-section align-items-center" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="home-text">
+                    <p>Hello, I'm</p>
+                    <h1>Yash Pame</h1>
+                    <h2 id="whoiam">Developer</h2>
+                    <a href="#about" class="btn link-item">More About Me</a>
+                    <a href="#portfolio" class="btn link-item">My Work</a>
+                </div>
+                <div class="home-img">
+                    <div class="img-box">
+                        <img src="img/HomePagePhoto.jpg" alt="profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+
+    <section class="about-section sec-padding" id="about">
+        <div class="container">
+            <div class="row"><div class="section-title"><h2>About Me</h2></div></div>
+            <div class="row">
+                <div class="about-img"><div class="img-box"><img src="img/AboutSectionPhoto.png" alt="about img"></div></div>
+                <div class="about-text">
+                    <p>"I am a software developer and an undergraduate student with experience in designing, coding, and testing. I'm highly proficient in Python and develop various softwares using python, Tkinter, MySQL, OpenCV and Machine Learning."</p>
+                    <h3>Skills</h3>
+                    <div class="skills">
+                            <div class="skill-item">Python</div>
+                            <div class="skill-item">Machine Learning</div>
+                            <div class="skill-item">Deep Learning</div>
+                            <div class="skill-item">Natural Language Processing</div>
+                            <div class="skill-item">OpenCV</div>
+                            <div class="skill-item">MySQL</div>
+                            <div class="skill-item">TensorFlow</div>
+                            <div class="skill-item">Arduino</div>
+                            <div class="skill-item">R</div>
+                            <div class="skill-item">C++</div>
+                            <div class="skill-item">Flask</div>
+                            <div class="skill-item">React</div>
+                            <div class="skill-item">HTML</div>
+                            <div class="skill-item">CSS</div>
+                            <div class="skill-item">Javascript</div>
+                    </div>
+
+                    <div class="about-tabs">
+                        <button type="button" class="tab-item active" data-target="#education">Education</button>
+                        <button type="button" class="tab-item" data-target="#experience">Work Experience</button>
+                    </div>
+
+                    <div class="tab-content active" id="education">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="date">2020-2024</span>
+                                <h4>BE Artificial Intelligence and Data Science- <span>Pune University</span></h4>
+                                <p>D Y Patil College of Engineering<br>FE SGPA: 9.98<br>SE SGPA: 9.48</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">2019-2020</span>
+                                <h4>12th Std- <span>Maharashtra board</span></h4>
+                                <p>AUB High School and Jr. College<br>JEE Mains: 89.95 Percentile<br>MHTCET: 91.85 percentile</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">2017-2018</span>
+                                <h4>10th Std- <span>CBSE</span></h4>
+                                <p>MIT Vishwashanti Gurukul School</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="experience">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="date">January 2022 - April 2022</span>
+                                <h4><span>Internship- </span>Machine Learning Developer</h4>
+                                <p>Company: Robocom International(Fessorpro)<br>Duration: 3 Months<br>Successfully worked on projects like House Price Prediction, Stock Market Analysis and NLP</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span class="date">July 2022</span>
+                                <h4><span>Freelance- </span>Data Visualization</h4>
+                                <p>Successfully visualized the given dataset. Plotted data using 3 different visualization techniques.</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span class="date">December 2021 - Present</span>
+                                <h4><span>President- </span>Artificial Intelligence Students Asociation</h4>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">August 2022 - Present</span>
+                                <h4><span>AI-ML Specialist- </span>Google Developer Student Club</h4>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">August 2022 - Present</span>
+                                <h4><span>AI-ML Lead- </span>Intel AI Students Club DYPCOE</h4>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">October 2021 - Present</span>
+                                <h4><span>Member- </span>DY Patil Robotics and AI Club</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="resume/YashPameResume.pdf" target="_blank" class="btn">Download Resume</a>
+                    <a href="#contact" class="btn link-item">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-section sec-padding" id="portfolio">
+        <div class="container">
+            <div class="row"><div class="section-title"><h2>Recent Work</h2></div></div>
+            <div class="row">
+                <div class="portfolio-item">
+                    <div class="portfolio-item-thumbnail"><img src="img/portfolio/P1.png" alt="portfolio item thumb"></div>
+                    <h3 class="portfolio-item-title">House Price Prediction</h3>
+                    <button type="button" class="btn view-project-btn">View Project</button>
+                    <div class="portfolio-item-details">
+                        <div class="description"><p>A Machine Learning Project to Predict House Prices in Mumbai, with accuracy of 95%</p></div>
+                        <div class="general-info">
+                            <ul>
+                                <li>Created - <span>AFebruary 2022</span></li>
+                                <li>Technology Used - <span>Machine Learning</span></li>
+                                <li>Role - <span>Developer</span></li>
+                                <!-- <li>View Project - <span><a href="www.a.com" target="_blank">www.a.com</a></span></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-item-thumbnail"><img src="img/portfolio/P2.png" alt="portfolio item thumb"></div>
+                    <h3 class="portfolio-item-title">Library Management System</h3>
+                    <button type="button" class="btn view-project-btn">View Project</button>
+                    <div class="portfolio-item-details">
+                        <div class="description"><p>A Library Management Project which helps institute in arranging and maintaining its library. Various features like adding and removing books, borrowing and returning books and searching books are present in it.</p></div>
+                        <div class="general-info">
+                            <ul>
+                                <li>Created - <span>June 2021</span></li>
+                                <li>Technology Used - <span>Python, Tkinter, MySQL</span></li>
+                                <li>Role - <span>Developer</span></li>
+                                <!-- <li>View Project - <span><a href="www.a.com" target="_blank">www.a.com</a></span></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-item-thumbnail"><img src="img/portfolio/P3.png" alt="portfolio item thumb"></div>
+                    <h3 class="portfolio-item-title">Banking System</h3>
+                    <button type="button" class="btn view-project-btn">View Project</button>
+                    <div class="portfolio-item-details">
+                        <div class="description"><p>This is a software similar to banking system where you could create you account and perform various operations like adding money, withdrawing money and make transfers.</p></div>
+                        <div class="general-info">
+                            <ul>
+                                <li>Created - <span>April 2021</span></li>
+                                <li>Technology Used - <span>Python, Tkinter</span></li>
+                                <li>Role - <span>Developer</span></li>
+                                <!-- <li>View Project - <span><a href="www.a.com" target="_blank">www.a.com</a></span></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-item-thumbnail"><img src="img/portfolio/P4.png" alt="portfolio item thumb"></div>
+                    <h3 class="portfolio-item-title">Portfolio Website</h3>
+                    <button type="button" class="btn view-project-btn">View Project</button>
+                    <div class="portfolio-item-details">
+                        <div class="description"><p>Its a Portfolio website which you are currently using</p></div>
+                        <div class="general-info">
+                            <ul>
+                                <li>Created - <span>January 2022</span></li>
+                                <li>Technology Used - <span>HTML, CSS, Javascript, Flask</span></li>
+                                <li>Role - <span>Developer</span></li>
+                                <li>View Project - <span><a href="www.a.com" target="_blank">www.a.com</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-item-thumbnail"><img src="img/portfolio/P5.png" alt="portfolio item thumb"></div>
+                    <h3 class="portfolio-item-title">Inventory Management</h3>
+                    <button type="button" class="btn view-project-btn">View Project</button>
+                    <div class="portfolio-item-details">
+                        <div class="description"><p>A Inventory Management application used to maintain Inventory status of your store. Operations like creating items and in-Party would be helpful in maintaining clear record.</p></div>
+                        <div class="general-info">
+                            <ul>
+                                <li>Created - <span>October 2021</span></li>
+                                <li>Technology Used - <span>Python, Tkinter, MySQL</span></li>
+                                <li>Role - <span>Developer</span></li>
+                                <li>View Project - <span><a href="www.a.com" target="_blank">www.a.com</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-item-thumbnail"><img src="img/portfolio/P6.png" alt="portfolio item thumb"></div>
+                    <h3 class="portfolio-item-title">Billing Software</h3>
+                    <button type="button" class="btn view-project-btn">View Project</button>
+                    <div class="portfolio-item-details">
+                        <div class="description"><p>Billing Software designed to create bills at store.</p></div>
+                        <div class="general-info">
+                            <ul>
+                                <li>Created - <span>April 2021</span></li>
+                                <li>Technology Used - <span>Python, Tkinter</span></li>
+                                <li>Role - <span>Developer</span></li>
+                                <li>View Project - <span><a href="www.a.com" target="_blank">www.a.com</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact-section sec-padding" id="contact">
+        <div class="container">
+            <div class="row"><div class="section-title"><h2>Contact Me</h2></div></div>
+            <div class="row">
+                <div class="contact-form">
+                    <form method="POST" name="google-sheet">
+                        <div class="row">
+                            <div class="input-group"><input type="text" id="Name" name="Name" placeholder="Name" class="input-control" required></div>
+                            <div class="input-group"><input type="text" id="Email" name="Email" placeholder="Email" class="input-control" required></div>
+                            <div class="input-group"><input type="text" id="Subject" name="Subject" placeholder="Subject" class="input-control" required></div>
+                            <div class="input-group"><textarea placeholder="Message" name="Message" id="Message" class="input-control" required></textarea></div>
+                            <div class="submit-btn"><button type="submit" class="btn" name="Submit" id="Submit">Send Message</button></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-info-item"><h3>Email</h3><p>yashpame@gmail.com</p></div>
+                    <div class="contact-info-item"><h3>Phone</h3><p>+91 8956582884</p></div>
+                    <div class="contact-info-item">
+                        <h3>Follow Me</h3>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/yashpame/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/YashPame" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/alwaysyashpame" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.kaggle.com/yashpame" target="_blank"><i class="fab fa-kaggle"></i></a>
+                            <a href="https://www.twitter.com/alwaysyashpame" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+
+    <div class="box2">
+        <div class="square" style="--i:2;"></div>
+        <div class="square" style="--i:3;"></div>
+        <div class="square" style="--i:7;"></div>
+    </div>
+</div>
+
+
+<div class="portfolio-popup">
+    <div class="pp-inner">
+        <div class="pp-content">
+            <div class="pp-header">
+                <button type="button" class="btn pp-close"><i class="fas fa-times"></i></button>
+                <div class="pp-thumbnail"><img src="portfolio/P3.png" alt="pp-thumbnail"></div>
+                <h3></h3>
+            </div>
+            <div class="pp-body"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/css-doodle@0.24.4/css-doodle.min.js"></script>
+<script src="script.js"></script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw1EEwLzQ7hvThHlkeyCK6X15aGf0NRbzAAqDAhuYfDl2CkXrjgIeMQxPZ92BLvUE9V/exec'
+    const form = document.forms['google-sheet']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks for Contacting Me..! I Will Contact You Soon..."))
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
+</body>
+</html>
