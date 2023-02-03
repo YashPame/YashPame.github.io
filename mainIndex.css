@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* disable horizontal scroll */
+    
+    overflow-x: hidden;
+}
+
+
+#container{
+    display:inline-flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    width: 100%;
+    height: 100%;
+}
+
+#left{
+    background-color:black;
+    width:50%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+  
+#right{
+    background-color: #FCF6F4;
+    width:50%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+  
+
+#leftinnerbox{
+    height: 55%;
+    width: 90%;
+    max-width: 450px;
+    border-style: ridge;
+    border: 2px solid #FCF6F4;
+    box-shadow: 0 0 3px #FCF6F4;
+    border-right: none;
+}
+
+#rightinnerbox {
+    height: 55%;
+    width: 90%;
+    max-width: 450px;
+    border-style: ridge;
+    border: 2px solid black;
+    box-shadow: 0 0 3px black;
+    border-left: none;
+    overflow: hidden;
+}
+
+#leftinnerbox{
+    color: #FCF6F4;
+    overflow: hidden;
+}
+#lefttext{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: homeleft 2s ease-in-out;
+}
+@keyframes homeleft{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes homeright{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+    
+
+#left #leftinnerbox h1{
+    font-size: 400%;
+    font-weight: 800;
+    color: #FCF6F4;
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0 5%;
+    text-shadow: 0.03em 0.03em 0.02em #777;
+}
+
+#left #leftinnerbox h2{
+    font-family: "Oswald", sans-serif;
+    font-size: 200%;
+    font-weight: 500;
+    color: #FCF6F4;
+    margin: 0;
+    padding: 0 5%;
+    margin-top: 3%;
+    margin-bottom: 8%;
+    text-shadow: 0.03em 0.03em 0.02em #777;
+}
+
+#left #leftinnerbox p{
+    font-family: "Oswald", sans-serif;
+    font-size: 150%;
+    color: #FCF6F499;
+    margin: 0;
+    padding: 0 5%;
+}
+
+#profileImage{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    animation: homeright 2s ease-in-out;
+}
+#profileImage img{
+    height: 110%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.MenuButtons{
+    position: absolute;
+    top: 85%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.MenuL,.MenuR {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.MenuOptionL, .MenuOptionR {
+    position: absolute;
+    bottom: 130%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.MenuOptionL::after, .MenuOptionR::after {
+    content: '';
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    margin-left: 5%;
+}
+
+.aL, .aR{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.MenuL:hover .MenuOptionL, .MenuR:hover .MenuOptionR {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+
+a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+
+.il{
+    color: #000;
+    font-size: 25px;
+}
+.ir{
+    color: #FCF6F4;
+    font-size: 25px;
+}
+
+.MenuOptionL {
+    background-color: #fff;
+    color: #000;
+    font-family: Oswald, sans-serif;
+    font-weight: bolder;
+}
+.MenuOptionR {
+    background-color: #000;
+    color: #FCF6F4;
+    font-family: Oswald, sans-serif;
+    font-weight: bolder;
+}
+
+.MenuOptionL::after {
+    border-color: #fff transparent transparent transparent;
+}
+.MenuOptionR::after {
+    border-color: #000 transparent transparent transparent;
+}
+
+.aL{
+    background-color: #FCF6F4;
+}
+.aR{
+    background-color: #000;
+}
+
+.aL:hover::before, .aR:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #fff200;
+  }
+  
+.aL:hover, .aR:hover{
+    color: #cdc979;
+    box-shadow: 0 0 5px #fff200;
+    text-shadow: 0 0 5px #fff200;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    #container{
+        flex-direction: column-reverse;
+    }
+    #left{
+        width:100%;
+        height:60%;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    #right{
+        width:100%;
+        height:40%;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    #leftinnerbox{
+        height: 70%;
+        min-width: 320px;
+        width: 55%;
+        border-style: ridge;
+        border: 2px solid #FCF6F4;
+        box-shadow: 0 0 3px #FCF6F4;
+        border-top: none;
+    }
+    #rightinnerbox {
+        height: 80%;
+        min-width: 320px;
+        width: 55%;
+        border-style: ridge;
+        border: 2px solid black;
+        box-shadow: 0 0 3px black;
+        border-bottom: none;
+    }
+
+    .MenuButtons{
+        top: 88%;
+    }
+    
+    .MenuL,.MenuR {
+        margin: 0 5px;
+    }
+    
+    .aL, .aR{
+        width: 50px;
+        height: 50px;
+        background-color: #FCF6F4;
+    }
+    
+    .il, .ir{
+        color: #000;
+        font-size: 20px;
+    }
+    
+    .MenuOptionL, .MenuOptionR {
+        background-color: #fff;
+        color: #000;
+        font-family: Oswald, sans-serif;
+        font-weight: bolder;
+    }
+    
+    
+    .MenuOptionL::after, .MenuOptionR::after {
+        border-color: #fff transparent transparent transparent;
+    }
+    
+    .aL .aR{
+        background-color: #FCF6F4;
+    }
+    
+    @keyframes homeleft{
+        0%{
+            transform: translateY(-100%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+    @keyframes homeright{
+        0%{
+            transform: translateY(100%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+}
+
