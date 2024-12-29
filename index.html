@@ -1,59 +1,390 @@
-<html>
-<head>
-    <title>Yash Pame</title>
-    <link rel="stylesheet" type="text/css" href="mainIndex.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-</head>
-<body>
-    <section class="home-section" id="home">
-        <div id="container">
-            <div id="left">
-                <div id="leftinnerbox">
-                    <div id="lefttext">
-                        <h1 class="hi">Hi,</h1>
-                        <h2 class="name">I'm Yash Pame.</h2>
-                        <p class="tagline">I'm a Machine Learning Developer and a Data Analyst.</p>
-                    </div>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    
+    <nav id="desktop-nav">
+      <div class="logo">Yash Pame</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <div class="logo">Yash Pame</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#achievements" onclick="toggleMenu()">Achievements</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+
+    <section id="profile">
+      <div class="section-pic-container">
+        <img src="./assets/profile-pic-Yash.png" alt="Yash Pame profile picture" />
+      </div>
+      <div class="section-text">
+        <p class="section-text-p1">Hello, I'm</p>
+        <h1 class="title">Yash Pame</h1>
+        <p class="section-text-p2">Data Scientist</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/YashResume.pdf')">Download CV</button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+        </div>
+        <div id="socials-container">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/yashpame/'"/>
+          <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/YashPame'"/>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <p class="section-text-p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section-pic-container">
+          <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic"/>
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/experience.png" alt="Experience icon" class="icon"/>
+              <h3>Experience</h3>
+              <p>1+ years <br />Data Scientist</p>
             </div>
-            <div id="right">
-                <div id="rightinnerbox">
-                    <div id="profileImage">
-                        <img src="Images\Hi.gif">
-                    </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Education icon" class="icon"/>
+              <h3>Education</h3>
+              <p>Bachelor of Engineering (BE)<br />D Y Patil College of Engineering Pune</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              As an AI and Data Science Engineer, I specialize in AI, LLMs, Generative AI, Deep Learning, and Programming. My expertise spans NLP to computer vision, with a track record of impactful projects. A quick learner and critical thinker, I excel both independently and in teams. Proficient in LLMs, ViTs, and Neural Networks, I focus on preprocessing and model optimization for high accuracy. Driven by innovation, I aim to make a real-world impact as a Data Scientist and Machine Learning Developer. My skills are proven through internships, projects, and research detailed below.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#skills'"/>
+    </section>
+    
+
+
+    <section id="skills">
+      <p class="section-text-p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="skills-details-container">
+        <div class="skills-containers">
+          <div class="details-container">
+            <div class="skills-class">
+              <div class="skill-sub-heading">
+                <h2 class="skills-sub-title">Programming Languages:</h2>
+              </div>
+              <div class="article-container">
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>Python</h3><p>Experienced</p></div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>C++</h3><p>Basic</p></div>
+                </article>
+              </div>
+            </div>
+            
+            <div class="skills-class">
+              <div class="skill-sub-heading">
+                <h2 class="skills-sub-title">Databases:</h2>
+              </div>
+              <div class="article-container">
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>SQL</h3><p>Experienced</p></div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>MongoDB</h3><p>Experienced</p></div>
+                </article>
+              </div>
+            </div>
+
+            <div class="skills-class">
+              <div class="skill-sub-heading">
+                <h2 class="skills-sub-title">Frontend Development:</h2>
+              </div>
+              <div class="article-container">
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>HTML</h3><p>Experienced</p></div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>CSS</h3><p>Intermediate</p></div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>JS</h3><p>Basic</p></div>
+                </article>
+              </div>
+            </div>
+
+            <div class="skills-class">
+              <div class="skill-sub-heading">
+                <h2 class="skills-sub-title">Backend Frameworks:</h2>
+              </div>
+              <div class="article-container">
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>Flask</h3><p>Experienced</p></div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>FastAPI</h3><p>Intermediate</p></div>
+                </article>
+              </div>
+            </div>
+
+            <div class="skills-class">
+              <div class="skill-sub-heading">
+                <h2 class="skills-sub-title">AI/ML Skills:</h2>
+              </div>
+              <div class="article-container">
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>Generative AI</h3><p>Experienced</p></div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>Machine Learning</h3><p>Experienced</p></div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>Deep Learning</h3><p>Experienced</p></div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>Computer Vision</h3><p>Experienced</p></div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>LLMs</h3><p>Experienced</p></div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>NLP</h3><p>Experienced</p></div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="skills icon" class="icon"/>
+                  <div><h3>ViTs</h3><p>Experienced</p></div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#experience'"/>
+    </section>
+
+
+    <section id="experience">
+      <p class="section-text-p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="experience-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Data Scientist</h2>
+            <h2 class="experience-subsub-title">Pivotchain Solution Technologies Pvt Ltd</h2>
+            <p class="experience-date">March 2024 - September 2024</p>
+
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                <div>
+                  <p>Worked on the Raven-AI Shield and Raven-AI Spirit projects, focusing on video surveillance and automated security features.</p> 
                 </div>
-            </div> 
-            <div class="MenuButtons">
-                <div class="MenuL">
-                    <span class="MenuOptionL">About</span>
-                    <a class="aL" href="Pages/about.html"><i class="il fa-solid fa-user"></i></a>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                <div>
+                  <p>Utilized synthetic data generation techniques with Stable Diffusion and RealVIZ XL and employed multi-modal transformers, CLIP, LLava, and LLAMA frameworks to develop a video search model capable of detecting events and individuals in long CCTV footage.</p> 
                 </div>
-                <div class="MenuL">
-                    <span class="MenuOptionL">Skills</span>
-                    <a class="aL" href="Pages/skills.html"><i class="il fa-solid fa-screwdriver-wrench"></i></a>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                <div>
+                  <p>Assisted in backend API development, including the integration of a payment gateway onto the company website.</p> 
                 </div>
-                <div class="MenuL">
-                    <span class="MenuOptionL">Experience</span>
-                    <a class="aL" href="Pages/experience.html"><i class="il fa-solid fa-briefcase"></i></a>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Gen AI Engineer</h2>
+            <h2 class="experience-subsub-title">NTT Data</h2>
+            <p class="experience-date">September 2024 - Present</p>
+
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                <div>
+                  <p>Currently undergoing training at NTT Data with a focus on Generative AI, Azure, and emerging technologies.</p> 
                 </div>
-                <div class="MenuR">
-                    <span class="MenuOptionR">Projects</span>
-                    <a class="aR" href="Pages/projects.html"><i class="ir fa-solid fa-code"></i></a>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                <div>
+                  <p>Developing expertise in cloud computing and AI-driven solutions through hands-on projects and advanced training.</p> 
                 </div>
-                <div class="MenuR">
-                    <span class="MenuOptionR">Achievements</span>
-                    <a class="aR" href="Pages/achievements.html"><i class="ir fa-solid fa-trophy"></i></a>
-                </div>
-                <div class="MenuR">
-                    <span class="MenuOptionR">Contact</span>
-                    <a class="aR" href="Pages/contact.html"><i class="ir fa-solid fa-message"></i></a>
-                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#achievements'"/>
+    </section>
+
+
+    <section id="achievements">
+      <p class="section-text-p1">Get To Know More</p>
+      <h1 class="title">Achievements</h1>
+      <div class="section-container">
+        <div class="section-pic-container">
+          <img src="./assets/achievement-pic.jpg" alt="Profile picture" class="achievements-pic"/>
+        </div>
+        <div class="achievements-details-container">
+          <div class="achievements-containers">
+            <div class="details-container">
+              <img src="./assets/experience.png" alt="Experience icon" class="icon"/>
+              <h3>Best Outgoing Student</h3>
+              <p>AI&DS Department<br />DYPCOE</p>
+            </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Education icon" class="icon"/>
+              <h3>Top 5 <br />Finalist</h3>
+              <p>DataSolve 2022<br />ML Hackathon</p>
+            </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Education icon" class="icon"/>
+              <h3>2x Runner Up</h3>
+              <p>SPPU Rollball Chanpionship<br />2022 and 2023</p>
+            </div>
+          </div>
+          <div class="achievements-details-container">
+            <div class="achievements-containers">
+              <div class="details-container">
+                <img src="./assets/experience.png" alt="Experience icon" class="icon"/>
+                <h3>Research Paper Publication</h3>
+                <p>A Novel Approach to Maze Solving Algorithm<br />IEEE Conference: ESCI 2023</p>
+              </div>
+              <div class="details-container">
+                <img src="./assets/education.png" alt="Education icon" class="icon"/>
+                <h3>Research Paper Publication</h3>
+                <p>A Novel Approach to Improve UX of Mouse Control using Hand Gestures<br />IEEE Conference: ICCUBEA 2023</p>
+              </div>
+
             </div>
         </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#projects'"/>
     </section>
-</body>
+
+
+    <section id="projects">
+      <p class="section-text-p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="project-details-container">
+        <div class="projects-containers">
+          <div class="details-container color-container">
+            <div class="article-container"> <img src="./assets/project-1.png" alt="Project 1" class="project-img" /> </div>
+            <h2 class="project-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container"> <img src="./assets/project-1.png" alt="Project 1" class="project-img" /> </div>
+            <h2 class="project-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container"> <img src="./assets/project-1.png" alt="Project 1" class="project-img" /> </div>
+            <h2 class="project-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#contact'"/>
+    </section>
+
+
+    <section id="contact">
+      <p class="section-text-p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon"/>
+          <p><a href="mailto:yashpame@gmail.com">yashpame@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon"/>
+          <p><a href="https://www.linkedin.com/in/yashpame/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Yash Pame. All Rights Reserved.</p>
+    </footer>
+
+
+
+
+
+    <script src="script.js"></script>
+  </body>
 </html>
